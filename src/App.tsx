@@ -1,12 +1,13 @@
 
-import './App.css'
+
+import MainLayout from './components/layout/MainLayout'
 
 function App() {
   
 
   return (
     <>
-      <h1>This is myUniversity management client</h1>
+      <MainLayout/>
     </>
   )
 }
