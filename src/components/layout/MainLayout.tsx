@@ -6,8 +6,8 @@ const { Header, Content, Footer, Sider } = Layout;
 
 const items : MenuProps["items"] = [
     {
-        key : "dashbord",
-        label : <NavLink to="/admin/dashbord">Dashbord</NavLink>
+        key : "dashboard",
+        label : <NavLink to="/admin/dashboard">Dashboard</NavLink>
     },
     {
         key : "university management",
