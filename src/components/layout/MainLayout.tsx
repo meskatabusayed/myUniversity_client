@@ -1,24 +1,41 @@
 
 import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
-import { Layout, Menu, theme } from 'antd';
+import { Layout, Menu, MenuProps} from 'antd';
 import { createElement } from 'react';
 
 const { Header, Content, Footer, Sider } = Layout;
 
-const items = [UserOutlined, VideoCameraOutlined, UploadOutlined, UserOutlined].map(
-    (icon, index) => ({
-      key: String(index + 1),
-      icon: createElement(icon),
-      label: `nav ${index + 1}`,
-    }),
-  );
+const items : MenuProps["items"] = [
+    {
+        key : "1",
+        label : "Dashbord"
+    },
+    {
+        key : "2",
+        label : "Profile"
+    },
+    {
+        key : "3",
+        label: "University Management",
+        children : [
+            {
+                key : "31",
+                label : "name"
+            },
+            {
+                key : "32",
+                label : "age"
+            }
+        ]
+    }
+]
 
 const MainLayout = () => {
-    const {
-        token: { colorBgContainer, borderRadiusLG },
-      } = theme.useToken();
+    // const {
+    //     token: { colorBgContainer, borderRadiusLG },
+    //   } = theme.useToken();style={{height : "100vh"}}
   return (
-    <Layout>
+    <Layout style={{height : "100vh"}}>
     <Sider
       breakpoint="lg"
       collapsedWidth="0"
@@ -29,18 +46,25 @@ const MainLayout = () => {
         console.log(collapsed, type);
       }}
     >
-      <div className="demo-logo-vertical" />
+      <div style={{
+        color: "white",
+        height: "4rem",
+        display: "flex",
+        justifyContent: "center",
+        alignItems : "center"
+    }}>
+        <h1>My UNIVERSITY</h1>
+      </div>
       <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} items={items} />
     </Sider>
     <Layout>
-      <Header style={{ padding: 0, background: colorBgContainer }} />
+      <Header style={{ padding: 0,  }} />
       <Content style={{ margin: '24px 16px 0' }}>
         <div
           style={{
             padding: 24,
             minHeight: 360,
-            background: colorBgContainer,
-            borderRadius: borderRadiusLG,
+            
           }}
         >
           content
