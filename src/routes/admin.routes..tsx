@@ -7,10 +7,7 @@ import Create_faculty from "../pages/admin/Create_faculty";
 
 import { NavLink } from "react-router-dom";
 
-type TRoute = {
-    path : string;
-    element : ReactNode;
-}
+
 
 type TSidebarItem = {
     key : string;
@@ -18,7 +15,7 @@ type TSidebarItem = {
     children ? : TSidebarItem[];
 }
 
- const adminPaths = [
+export const adminPaths = [
     {
         name : "Dashboard",
         path: "dashboard",
@@ -70,20 +67,3 @@ export const adminSidebarItems = adminPaths.reduce((acc : TSidebarItem[], item) 
     return acc;
 } , [])
 
-export const adminRoutes = adminPaths.reduce((acc : TRoute[]  , item)  => {
-    if(item.path && item.elment){
-        acc.push({
-            path : item.path,
-            element: item.elment,
-        })
-    }
-    if(item.children){
-        item.children.forEach((child) => {
-            acc.push({
-                path: child.path,
-                element : child.element,
-            })
-        })
-    }
-    return acc;
-} , [])
