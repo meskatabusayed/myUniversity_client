@@ -1,4 +1,5 @@
 import FacultyDashboard from "../pages/faculty/FacultyDashboard";
+import OfferedCourse from "../pages/faculty/OfferedCourse";
 
 
 export const facultyPaths = [
@@ -10,7 +11,7 @@ export const facultyPaths = [
     {
         name : "Offered-course",
         path: "offered-course",
-        element: <FacultyDashboard/>
+        element: <OfferedCourse/>
     },
    
 ];
