@@ -5,7 +5,12 @@ export const facultyPaths = [
     {
         name : "Dashboard",
         path: "dashboard",
-        elment: <FacultyDashboard/>
+        element: <FacultyDashboard/>
+    },
+    {
+        name : "Offered-course",
+        path: "offered-course",
+        element: <FacultyDashboard/>
     },
    
 ];
