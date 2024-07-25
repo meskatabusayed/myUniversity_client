@@ -8,6 +8,7 @@ import { adminPaths } from './admin.routes.';
 import Registration from '../pages/Registration';
 
 
+
 const router = createBrowserRouter([
   {
     path: '/',
