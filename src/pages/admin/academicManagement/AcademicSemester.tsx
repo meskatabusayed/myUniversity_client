@@ -1,0 +1,11 @@
+
+
+const AcademicSemester = () => {
+  return (
+    <div>
+      <h1>This is Academic Semester component</h1>
+    </div>
+  )
+}
+
+export default AcademicSemester
