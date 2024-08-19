@@ -23,8 +23,10 @@ const Login = () => {
       password: "admin12345",
     },
   });
+  
+  //{ error }
 
-  const [login, { error }] = useLoginMutation();
+  const [login] = useLoginMutation();
 
   const onSubmit = async (data : FieldValues) => {
     const toastId = toast.loading("loging in...");
@@ -40,6 +42,7 @@ const Login = () => {
       dispatch(setUser({ user: user, token: res.data.accessToken }));
       toast.success("Login successfully", { id: toastId, duration: 2000 });
       navigate(`/${user.role}/dashboard`);
+      //
     } catch (error) {
       toast.error("Something went wrong", { id: toastId, duration: 2000 });
     }
